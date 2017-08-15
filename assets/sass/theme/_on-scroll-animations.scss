@@ -1,0 +1,6 @@
+.os-animation {
+  opacity: 0;
+  &.animated {
+    opacity: 1;
+  }
+}

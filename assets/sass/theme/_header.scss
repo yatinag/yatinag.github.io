@@ -1,0 +1,191 @@
+/* HEADER */
+/* ===================================== */
+
+/* Header */
+
+.main-navigation {
+	background-color: #fdfdfd;
+	position: absolute;
+	width: 100%;
+}
+
+/* Logo */
+
+.logo {
+	img {
+		height: $logo-image-max-height;
+		margin: $header-margin;
+		z-index: 99999;
+		position: relative;
+	}
+}
+
+/* - Desktop Menu - */
+
+nav {
+	text-align: right;
+}
+
+nav ul {
+	@extend .list-reset;
+	margin: $header-margin;
+	z-index: 99999;
+	position: relative;
+	li {
+		display: inline-block;
+		padding: 5px 15px;
+		font-size: 14px;
+		font-weight: 400;
+		&:last-child {
+			padding-right: 15px;
+		}
+		a {
+			color: $header-link-color;
+			letter-spacing: 1px;
+			font-size: 14px;
+			&:hover {
+				color: $header-link-color;
+			}
+		}
+	}
+	@media (max-width: 991px) {
+		display: none;
+	}
+}
+
+/* - Dropdown - */
+
+// Icon
+
+.dropdown-icon {
+	margin-left: 3px;
+}
+
+/* .dropdown-toggle:hover svg {
+	line {
+		@include transition(.2s);
+		stroke:$brand-primary;
+	}
+} */
+
+// Menu
+
+ul.dropdown-menu {
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	margin-top: 24px;
+	border:0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	@include border-radius(1px);
+	@include transition(.2s);
+	li {
+		padding-left: 0;
+		margin-left: 0;
+		&:hover {
+			background-color: none;
+		}
+		a {
+			font-size: 12px;
+			font-weight: 400;
+			opacity: .9;
+			letter-spacing: 0px;
+			&:hover {
+				background-color: transparent;
+				color: $brand-primary;
+			}
+		}
+	}
+}
+
+/* - Mobile Menu - */
+
+// Icon
+.mobile-menu-trigger {
+	z-index: 999;
+	position: relative;
+}
+
+// Menu
+.mobile-navigation {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	margin-left: 0 !important;
+	background-color: $mobile-menu-background;
+	opacity: 0;
+	z-index: -1;
+	@include transition(.2s);
+	&.visible {
+		opacity: 1;
+		z-index: 9999 !important;
+	}
+	ul {
+		@extend .list-reset;
+		li {
+			margin-top: 24px;
+			transform: translateY(16px);
+			@include transition(.2s);
+			&.list-animation {
+				transform: translateY(0px);
+			}
+			&:nth-child(2) {
+				@include transition-delay(.02s)
+			}
+			&:nth-child(3) {
+				@include transition-delay(.04s)
+			}
+			&:nth-child(4) {
+				@include transition-delay(.06s)
+			}
+			&:nth-child(5) {
+				@include transition-delay(.08s)
+			}
+			&:nth-child(6) {
+				@include transition-delay(.010s)
+			}
+			a {
+				font-size: 22px;
+				font-weight: 600;
+				letter-spacing: 2px;
+				color: $mobile-menu-link-color;
+				&:hover {
+					color: $mobile-menu-link-color-hover !important;
+				}
+			}
+		}
+	}
+}
+
+.content {
+	a {
+		font-size: 14px !important;
+		padding-top: 24px;
+		position: relative;
+		display: block;
+		color: lighten($text-color, 59%) !important;
+		&:hover {
+			color: $mobile-menu-link-color-hover;
+		}
+	}
+}
+
+@import "navicon-animation.scss";
+
+#navicon {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(-50%, -50%);
+	width: 35px;
+	height: 30px;
+	padding-top: 13px;
+	z-index: 99999;
+	cursor: pointer;
+	@media (min-width: 991px) {
+		display: none;
+	}
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		include templates/head.jade
+	body
+		include templates/loader.jade
+		include templates/navigation.jade
+		section.header-introduction-small.text-center.background-image(style="background-image: url(assets/images/splash-image-6.jpg)")
+			.container.vertical-middle
+				.row.section-head.section-head-white
+					h2 CONTACT
+					ul.breadcrumb
+						li
+							a(href="home.html") AVOIR
+						li
+							a(href="#!") CONTACT
+		section.section.section-white.text-center
+			.container
+				.col-md-12.text-center
+					.section-head
+						img(src="assets/images/section-decor-black.png", width="40", alt="Divider")
+						p Dont stand there lonely, you can reach out via e-mail or come to our studio. We may have a lot to discuss, who knows.
+				.col-md-4.margin-top.os-animation(data-os-animation="fadeIn" data-os-animation-delay="0s")
+					.icon-block
+						i.icon-basic-flag1
+						h4 LOCATION
+						p 8th Avenue New York
+				.col-md-4.margin-top.small-screen-margin-top.os-animation(data-os-animation="fadeIn" data-os-animation-delay="0.1s")
+					.icon-block
+						i.icon-basic-smartphone
+						h4 PHONE
+						p (555) - 25 87 863
+				.col-md-4.margin-top.small-screen-margin-top.os-animation(data-os-animation="fadeIn" data-os-animation-delay="0.2s")
+					.icon-block
+						i.icon-basic-keyboard
+						h4 EMAIL
+						p adreasch@gmail.com
+			.container-fluid
+				.col-md-12.margin-top.padding-top.os-animation(data-os-animation="fadeIn" data-os-animation-delay="0s")
+					.google-map#map(style="height: 500px")
+		section.section.section-semi-white.text-center
+			.container
+				.col-md-12.text-center
+					.section-head.os-animation(data-os-animation="fadeIn" data-os-animation-delay="0s")
+						h3 REACH OUT
+						img(src="assets/images/section-decor-black.png", width="40", alt="Divider")
+						p You can always contact us via this contact form. We will require 1 bussiness day to reply (at worst).
+				.col-md-8.col-md-offset-2.margin-top.os-animation(data-os-animation="fadeIn" data-os-animation-delay="0s")
+					form#contact_form.contact-form(method="POST")
+						input.form-control(type="text", name="name" placeholder="YOUR NAME")
+						input.form-control(type="email", name="email" placeholder="YOUR E-MAIL")
+						textarea.form-control(placeholder="YOUR MESSAGE", name="message")
+						button.contact-form-submit(type="submit") SUBMIT
+						#messages.col-md-12
+		include templates/footer.jade
+		include templates/scripts.jade

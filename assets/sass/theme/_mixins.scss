@@ -1,0 +1,257 @@
+// Magnific Popup Setup
+
+@mixin mfp-setup (
+$magnific-overlay-bg,$magnific-close-bg,$magnific-close-icon
+){
+  // Magnific popup
+  .mfp-bg {
+	background: $magnific-overlay-bg;
+  }
+  .mfp-image-holder .mfp-close,
+  .mfp-iframe-holder .mfp-close {
+	background-color: $magnific-close-bg;
+	color: $magnific-close-icon;
+	&:before {
+	  border-bottom-color: $magnific-close-bg;
+	}
+	&:after {
+	  border-top-color: $magnific-close-bg;
+	}
+  }
+}
+
+// Buttons Setup
+
+@mixin button-defaults (
+$btn-default-text,            	// Default button text color
+$btn-default-bg,              	// Default button bg color
+$btn-default-bg-hover,        	// Default button bg hover color
+
+$btn-warning-text,            	// Warning button text color
+$btn-warning-bg,             	// Warning button bg color
+$btn-warning-bg-hover,        	// Warning button bg hover color
+
+$btn-danger-text,             	// Warning button text color
+$btn-danger-bg,               	// Warning button bg color
+$btn-danger-bg-hover,        	// Warning button bg hover color
+
+$btn-success-text,            	// Success button text color
+$btn-success-bg,              	// Success button bg color
+$btn-success-bg-hover,        	// Success button bg hover color
+
+$btn-primary-text,            	// Primary button text color
+$btn-primary-bg,             	// Primary button bg color
+$btn-primary-bg-hover,        	// Primary button bg hover color
+
+$btn-info-text,               		// Info button text color
+$btn-info-bg,                 		// Info button bg color
+$btn-info-bg-hover,           	// Info button bg hover color
+$btn-link-text,               		// Info button text color
+$btn-link-bg                		// Info button bg color
+) {
+  .btn {
+	border:0 !important
+  }
+  .btn-default {
+	background: $btn-default-bg !important;
+	color: $btn-default-text !important;
+	&:hover {
+	  background: $btn-default-bg-hover !important;
+	  color:$btn-default-text !important;
+	}
+  }
+  .btn-warning {
+	background: $btn-warning-bg !important;
+	color: $btn-warning-text !important;
+	&:hover {
+		background: $btn-warning-bg-hover !important;
+		color:$btn-warning-text !important;
+	}
+  }
+  .btn-danger {
+	background: $btn-danger-bg !important;
+	color: $btn-danger-text !important;
+	&:hover {
+		background: $btn-danger-bg-hover !important;
+		color:$btn-danger-text !important;
+	}
+  }
+  .btn-success {
+	background: $btn-success-bg !important;
+	color: $btn-success-text !important;
+	&:hover {
+		background: $btn-success-bg-hover !important;
+		color:$btn-success-text !important;
+	}
+  }
+  .btn-info {
+	background: $btn-info-bg !important;
+	color: $btn-info-text !important;
+	&:hover {
+		background: $btn-info-bg-hover !important;
+		color:$btn-info-text !important;
+	}
+  }
+    .btn-primary {
+	background: $btn-primary-bg !important;
+	color: $btn-primary-text !important;
+	&:hover {
+		background: $btn-primary-bg-hover !important;
+		color:$btn-primary-text !important;
+	}
+  }
+  .btn-link {
+	background: $btn-link-bg;
+	color: $btn-link-text;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+	 &:hover {
+		color:$brand-primary !important;
+	}
+	&:after {
+		content: '\2192';
+		margin-left: 10px;
+	}
+  }
+  .btn-link.small {
+	padding-top:10px;
+	padding-bottom: 10px;
+  }
+}
+
+// General mixins
+
+@mixin transition($transition...) {
+	-moz-transition:    $transition;
+	-o-transition:      $transition;
+	-webkit-transition: $transition;
+	transition:         $transition;
+}
+@mixin transition-property($property...) {
+	-moz-transition-property:    $property;
+	-o-transition-property:      $property;
+	-webkit-transition-property: $property;
+	transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+	-moz-transition-property:    $duration;
+	-o-transition-property:      $duration;
+	-webkit-transition-property: $duration;
+	transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+	-moz-transition-timing-function:    $timing;
+	-o-transition-timing-function:      $timing;
+	-webkit-transition-timing-function: $timing;
+	transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+	-moz-transition-delay:    $delay;
+	-o-transition-delay:      $delay;
+	-webkit-transition-delay: $delay;
+	transition-delay:         $delay;
+}
+@mixin animation($name, $duration, $delay, $ease) {
+  -webkit-animation: $name $duration $delay $ease;
+  -moz-animation:    $name $duration $delay $ease;
+  -ms-animation:     $name $duration $delay $ease;
+}
+@mixin opacity($value){
+	$IEValue: $value*100;
+	opacity: $value;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+	filter: alpha(opacity=$IEValue);
+}
+
+@mixin transition($transition-time) {
+	-webkit-transition: all  $transition-time ease-in-out;
+	-moz-transition: all  $transition-time ease-in-out;
+	-ms-transition: all  $transition-time ease-in-out;
+	-o-transition: all  $transition-time ease-in-out;
+	transition: all  $transition-time ease-in-out;
+}
+
+@mixin transition-delay($delay...) {
+    -moz-transition-delay:    $delay;
+    -o-transition-delay:      $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius !important;
+	border-radius: $radius !important;
+	background-clip: padding-box !important;  /* stops bg color from leaking outside the border: */
+}
+@mixin text-shadow {
+	text-shadow: none;
+}
+
+@mixin box-shadow {
+	box-shadow: 0px;
+	-webkit-box-shadow:0px;
+}
+
+@mixin transform-origin ($origin) {
+	-moz-transform-origin: $origin;
+	-o-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+	transform-origin: $origin;
+}
+
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+
+// Single side border-radius
+
+@mixin border-top-radius($radius) {
+	-webkit-border-top-right-radius: $radius;
+	border-top-right-radius: $radius;
+	-webkit-border-top-left-radius: $radius;
+	border-top-left-radius: $radius;
+	background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+	-webkit-border-bottom-right-radius: $radius;
+	border-bottom-right-radius: $radius;
+	-webkit-border-top-right-radius: $radius;
+	border-top-right-radius: $radius;
+	background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+	-webkit-border-bottom-right-radius: $radius;
+	border-bottom-right-radius: $radius;
+	-webkit-border-bottom-left-radius: $radius;
+	border-bottom-left-radius: $radius;
+	background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+	-webkit-border-bottom-left-radius: $radius;
+	border-bottom-left-radius: $radius;
+	-webkit-border-top-left-radius: $radius;
+	border-top-left-radius: $radius;
+	background-clip: padding-box;
+}
+
+// Text rotator
+
+@mixin rotate( $degrees ) {
+	-webkit-transform: rotate(#{$degrees}deg);
+	-moz-transform: rotate(#{$degrees}deg);
+	-ms-transform: rotate(#{$degrees}deg);
+	-o-transform: rotate(#{$degrees}deg);
+	transform: rotate(#{$degrees}deg);
+	filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+	zoom: 1;
+}

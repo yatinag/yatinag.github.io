@@ -1,0 +1,402 @@
+/* GENERAL TYPOGRAPHY RULES */
+/* ===================================== */
+
+/* - Body - */
+
+body {
+	-webkit-font-smoothing: antialiased;
+	font-family: "Josefin Sans", sans-serif !important;
+	font-weight: 400;
+	font-size: $font-size-base;
+	&.body-animated {
+		-webkit-animation: fadeIn .7s;
+		animation: fadeIn .7s;
+	}
+}
+
+/* - Content - */
+
+p {
+	line-height: 28px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	position: relative;
+	z-index: 1;
+	font-family: "Josefin Sans", sans-serif !important;
+		&.headings-caps {
+			text-transform: uppercase;
+		}
+}
+
+.transition-overlay{ width:100%; height:100%; position:fixed; left:0; top:0; z-index:99999; opacity:0; visibility:hidden;}
+.transition-overlay.show-me{ opacity:1; visibility:visible;}
+.transition-overlay{ transition-duration: 700ms; -webkit-transition-duration: 700ms; transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1); -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);}
+
+
+h1, .headline {
+	font-size: 36px;
+	line-height: 48px;
+}
+
+h1 small {
+	font-size: 24px;
+}
+
+h2 {
+	font-size: 24px;
+	line-height: 24px;
+}
+
+h2 small {
+	font-size: 18px;
+}
+
+h3 {
+	font-size: 21px;
+	line-height: 24px;
+}
+
+h3 small {
+	font-size: 16px;
+	font-weight: light;
+}
+
+h4, h5, h6 {
+	line-height: 24px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+h4 small {
+	font-size: 13px;
+}
+
+h5 {
+	font-size: 13px;
+}
+
+h6 {
+	font-size: 11px;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+/* - Links - */
+
+a {
+	text-decoration: none;
+	color: $link-color;
+	font-size: 13px;
+	@include transition(.2s);
+		&:hover {
+			text-decoration: none !important;
+			color: $link-color-hover; 
+		}
+		&:active, &:focus {
+			outline: none;
+			text-decoration: none;
+			color: $link-color-hover;
+		}
+}
+
+/* - Spaced title - */
+
+.title-space {
+	letter-spacing: 7px;
+	font-size: 13px;
+	text-transform: uppercase;
+	display: block;
+	font-weight: 400;
+}
+
+h1 > small.subheading {
+	letter-spacing:4px;
+	font-size: 8px;
+	display: block;
+}
+
+/* - Form elements - */
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+	@include box-shadow;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	@include text-shadow;
+	font-weight: light;
+	-webkit-font-smoothing:antialiased;
+	&:focus {
+		outline: none;
+		border:1px solid rgba(#fff, .1) !important
+	}
+}
+
+input[type="submit"], input[type="button"] {
+	-webkit-font-smoothing:antialiased;
+	border: 0;
+	padding: 6px 12px;
+		&:focus {
+			outline: none;
+		}
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+button:focus,
+button:active { 
+	outline:none !important;
+	border:none !important;
+}
+
+/* - Buttons - */
+
+.btn {
+	font-size: 14px !important;
+	//@include transition(.2s);
+}
+
+.btn-sm {
+	border-radius:0px
+}
+
+/* - Pre and code - */
+
+pre, code, var, kbd, samp, tt, dir, listing, plaintext, xmp, abbr, acronym, q {
+	font-size: 14px;
+	word-break: normal;
+	border: 0;
+}
+
+/* - Font weight classes - */
+
+.black {
+	font-weight: bolder;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.regular {
+	font-weight: normal;
+}
+
+.light {
+	font-weight: lighter;
+}
+
+.hairline {
+	font-weight: lighter;
+}
+
+/* - Font size classes - */
+
+.big {
+	font-size: 22px;
+	line-height: 0.8;
+}
+
+.bigger {
+	font-size: 42px;
+	line-height: 0.8;
+}
+
+.super {
+	font-size: 60px;
+	line-height: 0.8;
+	margin-bottom: 0;
+		small {
+			font-size: .35em;
+		}
+}
+
+.hyper {
+	font-size: 150px;
+	line-height: 0.8;
+		small {
+			font-size: .35em;
+		}
+}
+
+.tiny {
+	font-size: 12px
+}
+
+/* - Text aligns classes - */
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.text-justify {
+	text-align: justify !important;
+}
+
+/* - Text transform classes - */
+
+.text-caps {
+	text-transform: uppercase !important;
+}
+
+.text-italic {
+	font-style: italic;
+}
+
+.text-lowercase {
+	text-transform: none !important;
+}
+
+/* Responsive typography */
+
+@media (max-width: 767px) {
+	h1, .headline {
+		font-size: 24px;
+		line-height: 36px;
+	}
+
+	h1 small {
+		font-size: 16px;
+	}
+
+	h2 {
+		font-size: 21px;
+		line-height: 36px;
+	}
+
+	h2 small {
+		font-size: 14px;
+	}
+
+	h3 {
+		font-size: 18px;
+		line-height: 36px;
+	}
+
+	h3 small {
+		font-size: 14px;
+	}
+
+	.super {
+		font-size: 48px;
+			small {
+				margin-top: 12px;
+				display: block;
+			}
+	}
+
+	.hyper {
+		font-size: 70px;
+		line-height: 1;
+	}
+
+	.small-screen-center {
+		text-align: center !important;
+	}
+
+	.small-screen-margin-bottom {
+		margin-bottom: 24px !important;
+	}
+
+	.small-screen-center.bordered-header {
+		&:after {
+			left: 50%;
+			margin-left: -35px;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.super {
+		font-size: 36px;
+		line-height: 1em;
+	}
+
+	.hyper {
+		font-size: 48px;
+		line-height: 1em;
+	}
+	.title-space {
+		letter-spacing: 0 !important;
+	}
+}
+
+@media (max-width: 320px) {
+	body {
+		font-size: 14px;
+	}
+
+	h1, .headline {
+		font-size: 21px;
+		line-height: 24px;
+	}
+
+	h1 small {
+		font-size: 14px;
+	}
+	h2 {
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	h2 small {
+		font-size: 12px;
+	}
+
+	h3 {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	h3 small {
+		font-size: 11px;
+	}
+	.big {
+		font-size: 18px;
+		line-height: 1;
+	}
+
+	.bigger {
+		font-size: 21px;
+		line-height: 1;
+	}
+
+	.super {
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	.hyper {
+		font-size: 36px;
+		line-height: 1;
+	}
+}

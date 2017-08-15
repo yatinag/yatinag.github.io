@@ -1,0 +1,60 @@
+@include button-defaults(
+$btn-default-text:#171720,            		// Default button text color
+$btn-default-bg:#ecf0f1,       			// Default button bg color
+$btn-default-bg-hover:#ecf0f1,       		// Default button bg hover color
+
+$btn-warning-text:#fff,          			// Warning button text color
+$btn-warning-bg:#d35400,             		// Warning button bg color
+$btn-warning-bg-hover:#d35400,        		// Warning button bg hover color
+
+$btn-danger-text:#fff,             			// Warning button text color
+$btn-danger-bg:#e74c3c,              		// Warning button bg color
+$btn-danger-bg-hover:#e74c3c,         		// Warning button bg hover color
+
+$btn-success-text:#fff,            			// Success button text color
+$btn-success-bg: #2ecc71,              		// Success button bg color
+$btn-success-bg-hover: #2ecc71,       		 // Success button bg hover color
+
+$btn-info-text:#fff,               			// Info button text color
+$btn-info-bg:#3498db,                 		// Info button bg color
+$btn-info-bg-hover:#3498db,          		// Info button bg hover color
+
+$btn-primary-text:#fff,               		              // Primary button text color
+$btn-primary-bg:#2098D1,                 		// Primary button bg color
+$btn-primary-bg-hover:#2098D1,          	              // Primary button bg hover color
+
+$btn-link-text:#131313,            			// Info button text color
+$btn-link-bg:rgba(255,255,255,0.0)               	// Info button bg color
+);
+
+.btn {
+	@include border-radius(0px);
+	font-weight: 600;
+	i {
+		font-size: 10px;
+		position: relative;
+		display: inline-block;
+		padding-right: 5px;
+	}
+}
+
+/* Custom Buttons */
+
+.btn-white {
+	@extend .btn;
+	border: 2px solid $text-color-alternative !important;
+	color: $text-color-alternative;
+	padding: 10px 20px;
+	@include sweep-to-right;
+	&:hover {
+		color: $text-color !important;
+	}
+}
+
+.btn-black {
+	@extend .btn;
+	border: 2px solid $text-color !important;
+	color: $text-color;
+	padding: 10px 20px;
+	@include sweep-to-right-alternative;
+}

@@ -1,0 +1,132 @@
+/* PORTFOLIO HOVER EFFECT */
+/* ===================================== */
+
+.masonry-item-overlay {
+	color: #fff;
+	.masonry-item-overlay-inner {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		text-align: center;
+		top: 50%;
+	}
+	h2,
+	p {
+		opacity: 0;
+	}
+	h2 {
+		@extend .bold;
+		@extend .bigger;
+	}
+	p {
+		@extend .title-space;
+	}
+}
+
+.masonry-item img,
+.grid-item img {
+	width: 100%;
+	max-height: 100%;
+	@include transition(.2s);
+}
+
+.background-color-1 {
+	background-color: $brand-secondary;
+}
+
+.background-color-2 {
+	background-color: $brand-primary;
+}
+
+.background-color-3 {
+	background-color: $background-color-3;
+}
+
+.background-color-4 {
+	background-color: $background-color-4;
+}
+
+/* - Masonry - */
+
+ul.masonry-wrap {
+	@extend .list-reset;
+	li {
+		margin: 15px 0px;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+/* - Grid - */
+
+ul.grid-wrap {
+	@extend .list-reset;
+	li {
+		margin: 15px 0px;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+/* - Fullscreen - */
+
+ul.fullscreen-wrap {
+	@extend .list-reset;
+	li {
+		margin: 0px 0px;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+/* - Single Page - */
+
+.portfolio-single-introduction {
+	span {
+		@extend .title-space;
+		margin-bottom: 24px;
+	}
+	h3 {
+		@extend .bigger;
+		@extend .bold;
+		margin-bottom: 24px;
+	}
+	img {
+		margin-bottom: 24px;
+	}
+	p {
+		@extend .big;
+		opacity: .8;
+		margin-bottom: 24px;
+		max-width: 50%;
+		line-height: 26px;
+		margin-left: auto;
+		margin-right: auto;
+		@media (max-width: 768px) {
+			max-width: 100%;
+		}
+	}
+	h4 {
+		font-weight: 600;
+		small {
+			display: block;
+			font-size: 16px;
+		}
+	}
+}
+
+.portfolio-single-content {
+	img {
+		width: 100%;
+	}
+}
+
+.portfolio-single-footer {
+	a {
+		margin-top: 48px;
+	}
+}

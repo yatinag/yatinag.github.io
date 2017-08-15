@@ -1,0 +1,82 @@
+//- NAVIGATION MENU
+header.main-navigation
+	.container-fluid
+		.col-md-2
+			a(href="home.html").logo
+				img(src="assets/images/logo/logo-white.png", alt="Logo")
+			#navicon
+				.bar
+				.bar
+				.bar
+		//- Desktop menu
+		.col-md-10
+			nav
+				ul(role="menu")
+					li.dropdown
+						a.dropdown-toggle(data-toggle="dropdown",  role="button", aria-haspopup="true", aria-expanded="false")  HOME 
+							span.dropdown-icon
+								include svg/dropdown.jade
+						ul.dropdown-menu
+							li
+								a(href="home.html") SLIDER
+							li
+								a(href="home-video.html") VIDEO
+							li
+								a(href="home-parallax.html") PARALLAX
+							li
+								a(href="home-fullscreen.html") FULLSCREEN
+					li
+						a(href="about.html") AVOIR
+					li.dropdown
+						a.dropdown-toggle(data-toggle="dropdown",  role="button", aria-haspopup="true", aria-expanded="false")  PROJECTS 
+							span.dropdown-icon
+								include svg/dropdown.jade
+						ul.dropdown-menu
+							li
+								a(href="portfolio.html") MASONRY
+							li
+								a(href="portfolio-grid.html") GRID
+							li
+								a(href="portfolio-single.html") SINGLE PROJECT
+					li
+						a(href="services.html") SERVICES
+					li.dropdown
+						a.dropdown-toggle(data-toggle="dropdown",  role="button", aria-haspopup="true", aria-expanded="false")  BLOG 
+							span.dropdown-icon
+								include svg/dropdown.jade
+						ul.dropdown-menu
+							li
+								a(href="blog.html") BLOG
+							li
+								a(href="blog-post.html") BLOG POST
+							li
+								a(href="blog-sidebar.html") SIDEBAR
+					li
+						a(href="contact.html") CONTACT
+		//- Mobile menu
+		.mobile-navigation.vertical-middle.text-center
+			ul(role="menu").text-center
+				li
+					a(href="#!").mobile-dropdown HOME
+					.content
+						a(href="home.html") SLIDER
+						a(href="home-video.html") VIDEO
+						a(href="home-parallax.html") PARALLAX
+						a(href="home-fullscreen.html") FULLSCREEN
+				li
+					a(href="about.html") AVOIR
+				li
+					a(href="#!").mobile-dropdown PROJECTS
+					.content
+						a(href="portfolio.html") MASONRY
+						a(href="portfolio-grid.html") GRID
+						a(href="portfolio-single.html") PROJECT POST
+				li
+					a(href="services.html") SERVICES
+				li
+					a(href="#!").mobile-dropdown BLOG
+					.content
+						a(href="blog.html") BLOG
+						a(href="blog-post.html") BLOG POST
+				li
+					a(href="contact.html") CONTACT

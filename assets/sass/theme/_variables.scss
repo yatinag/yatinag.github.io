@@ -1,0 +1,91 @@
+//  AVOIR Variables
+// =========================
+// =========================
+
+// Colors
+// =========================
+
+// General
+$brand-primary: #2ecc71;
+$brand-secondary: #131313;
+
+$loader-background: #2A2826;
+
+// Links
+$link-color: #131313;
+$link-color-hover: $brand-primary;
+
+// Header 
+$header-bgcolor: #fff;
+$header-link-color: #fdfdfd;
+$header-link-color-hover: $brand-primary;
+$header-txtcolor: #fdfdfd;
+
+$hamburger-icon-color: #fdfdfd;
+$mobile-menu-background: #131313;
+$mobile-menu-link-color: #fdfdfd;
+$mobile-menu-link-color-hover: $brand-primary;
+
+// Sections
+$section-white: #fff;
+$section-white-text: #131313;
+
+$section-semi-white: lighten(#ddd, 9%);
+$section-semi-white-text: #131313;
+
+$section-black: #131313;
+$section-black-text: #fdfdfd;
+
+$section-overlay-color: #131313;
+
+// Navbar
+$navbar-link-color: #000;
+$navbar-link-color-hover: $brand-primary;
+
+// Map
+$background-map-label: rgba(23,23,32,.7);
+
+// Typography
+$text-color: #131313;
+$text-color-alternative: #fff;
+
+//Owl Slider
+$owl-theme-color: $brand-primary;
+
+//Portfolio
+
+// Background colors 1&2 are brand-primary and brand-secondary.
+$background-color-3: #d30202;
+$background-color-4: #2658fd;
+
+// Typography
+// =========================
+
+$font-size-base: 16px !default;
+$line-height-base: 1.5 !default;
+
+// Layout
+//=========================
+
+// Navbar
+$header-margin: 30px 0px; // Controls the height of the Header, while it keeps the elements centered
+
+$logo-image-max-height: 20px;
+$logo-image-max-height-sm: 25px;
+$logo-image-max-height-xs: 25px;
+
+// Sections
+$section-padding: 96px 0px;
+$section-padding-short: 60px 0;
+$section-padding-tiny: 24px 0;
+
+// Footer
+$footer-padding: 96px 0px 14px 0px;
+$footer-background-color: #fafafa;
+
+// Core variables overrides
+//=========================
+
+$border-radius-base: 0;
+$border-radius-small: 0;
+$border-radius-large: 0;

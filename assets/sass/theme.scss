@@ -1,0 +1,89 @@
+/* 
+======================================================================== 
+
+AVOIR: theme.css
+Main Theme CSS file
+
+@Author: Andrew ch 
+@URL: http://andrewch.eu
+ 
+This is the file you need to edit to change the look of the theme.
+
+======================================================================== 
+
+- // TABLE OF CONTENTS // -
+
+========================================================================
+
+01. Components
+02. Header
+03. Typography
+04. Utilities
+05. Buttons
+06. Blog
+07. Contact
+08. Footer
+09. Portfolio
+10. Animate.css
+11. Revolution Slider
+12. Magnific Popup
+13. Font Icons
+14. On Scroll Animations
+15. Widgets
+
+*/
+
+//  Theme
+//======================
+
+@import "theme/variables";
+@import "theme/mixins";
+@import "theme/hover";
+
+//  Components
+@import "theme/componets";
+
+ //  Header
+@import "theme/header";
+
+//  Typography
+@import "theme/typography";
+
+//  Utilities
+@import "theme/utilities";
+
+//  Buttons
+@import "theme/buttons";
+
+//  Blog
+@import "theme/blog";
+
+//  Contact
+@import "theme/contact";
+
+//  Footer
+@import "theme/footer";
+
+//  Portfolio
+@import "theme/portfolio";
+
+//  Plugins
+//======================
+
+//  On scroll Animations
+@import "theme/on-scroll-animations";
+
+//  Animations
+@import "theme/animations-source";
+
+//  Revolution-slider
+@import "theme/rev-slider";
+
+//  Magnific
+@import "theme/magnific-popup";
+
+//  Font Icons
+@import "theme/fonticons";
+
+//  Widgets
+@import "theme/widgets";

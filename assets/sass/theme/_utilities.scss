@@ -1,0 +1,336 @@
+/* UTILITY CLASSES */
+/* ===================================== */
+
+/* - Margin elements - */
+
+.no-margin {
+	margin: 0 !important;
+}
+
+.margin-bottom {
+	margin-bottom: 24px !important;
+}
+
+.margin-top {
+	margin-top: 24px !important;
+}
+
+.margin-left {
+	margin-left: 24px !important;
+}
+
+.margin-right {
+	margin-right: 24px !important;
+}
+
+.margin-top-big {
+	margin-top: 48px !important
+}
+
+.margin-top-huge {
+	margin-top: 96px !important
+}
+
+.margin-top-small {
+	margin-top: 10px
+}
+
+/* - Padding elements - */
+
+.no-padding {
+	padding: 0 !important;
+}
+
+.padding-bottom {
+	padding-bottom: 24px !important;
+}
+
+.padding-top {
+	padding-top: 24px !important;
+}
+
+.padding-left {
+	padding-left: 24px !important;
+}
+
+.padding-right {
+	margin-right: 24px !important;
+}
+
+.padding-top-big {
+	padding-top: 48px !important
+}
+
+.padding-top-huge {
+	padding-top: 250px !important
+}
+
+.padding-bottom-fix {
+	padding-bottom: 250px;
+}
+
+@media (max-width: 991px) {
+	.small-screen-no-padding-top {
+		padding-top: 0 !important;
+	}
+}
+
+/* - Padded elements - */
+
+.padded {
+	margin-bottom: 24px;
+	padding-bottom: 24px;
+}
+
+.padded-big {
+	margin-bottom: 48px;
+	padding-bottom: 48px;
+}
+
+.padded-huge {
+	margin-bottom: 96px;
+	padding-bottom: 48px;
+}
+
+.padded-top {
+	margin-top: 24px;
+	padding-top: 24px;
+}
+
+.padded-top-big {
+	margin-top: 48px;
+	padding-top: 48px;
+}
+
+.padded-top-huge {
+	margin-top: 96px;
+	padding-top: 48px;
+}
+
+/* - Block behaviors */
+
+.block {
+	display: block !important;
+}
+
+.inline-block {
+	display: inline-block !important;
+}
+
+/* - Clear - */
+
+.clear {
+	clear: both;
+}
+
+/* - Responsive Images */
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* - Disabled - */
+
+.disabled {
+	opacity: .5;
+}
+
+/* - Vertical Middle - */
+
+.vertical-middle, .vertical-bottom {
+	display: table;
+	
+}
+.vertical-middle > *, .vertical-bottom > * {
+	display: table-cell;
+	float: none;
+
+}
+
+.vertical-middle > * {
+	vertical-align: middle;
+}
+
+.vertical-bottom > * {
+	vertical-align: bottom;
+}
+
+@media (min-width: 993px) {
+	.vertical-middle-desktop, .vertical-bottom-desktop {
+		display: table;
+	
+	}
+	.vertical-middle-desktop > *, .vertical-bottom-desktop > * {
+		display: table-cell;
+		float: none;
+	
+	}
+
+	.vertical-middle-desktop > * {
+		vertical-align: middle;
+	
+	}
+
+	.vertical-bottom-desktop > * {
+		vertical-align: bottom;
+	}
+}
+
+.click-disable {
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* - Opacity Classes - */
+
+.opacity-01 {
+	opacity:.1;
+}
+
+.opacity-02 {
+	opacity:.2;
+}
+
+.opacity-03 {
+	opacity:.3;
+}
+
+.opacity-03 {
+	opacity:.3;
+}
+
+.opacity-04 {
+	opacity:.4;
+}
+
+.opacity-05 {
+	opacity:.5;
+}
+
+.opacity-06 {
+	opacity:.6;
+}
+
+.opacity-07 {
+	opacity:.7;
+}
+
+.opacity-08 {
+	opacity:.8;
+}
+
+.opacity-09 {
+	opacity:.9;
+}
+
+.opacity-10 {
+	opacity:1;
+}
+
+/* - Width 100vw - */
+
+.width-100 {
+	width: 100vw !important;
+}
+
+/* - Responsive Utilities */
+
+@media (max-width:991px) {
+	.small-screen-margin-top {
+		margin-top: 24px !important
+	}
+	.small-screen-no-margin-top {
+		margin-top: 0 !important
+	}
+	.small-image-center {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.small-text-center {
+		text-align: center !important;
+	}
+
+	.small-screen-padding-0 {
+		padding: 0 !important;
+		padding-left: 20px !important;
+	}
+
+	.small-screen-margin-small {
+		margin-top: 15px !important
+	}
+
+	.small-screen-text-left {
+		text-align: left !important
+	}
+
+	.small-screen-text-center {
+		text-align: center !important
+	}
+
+	.padding-top-huge {
+		padding-top: 24px !important
+	}
+}
+
+@media (max-width:491px) {
+	.small-screen-margin-top {
+		margin-top: 24px !important
+	}
+
+	.xs-screen-no-margin-top {
+		margin-top: 0 !important
+	}
+	.small-screen-hidden {
+		display: none !important
+	}
+
+	.xs-screen-text-center {
+		text-align: center !important;
+	}
+}
+
+/* - Animation Control - */
+
+.pause_animation {
+	-moz-animation-name: none;
+	-webkit-animation-name: none;
+	animation-name: none;
+	visibility: hidden;
+}
+
+.rotated {
+	transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	@include transition(.2s);
+}
+
+.rotated-back {
+	transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	@include transition(.2s);
+} 
+
+/* - List Controls - */
+
+.list-reset {
+	padding-left: 0;
+	list-style: none;
+}
+
+/* - Monitor Margin - */
+
+.margin-top-100 {
+	margin-top: -100px;
+}

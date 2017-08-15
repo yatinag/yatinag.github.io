@@ -1,0 +1,128 @@
+/* FOOTER */
+/* ===================================== */
+
+footer {
+	width: 100%;
+	height: auto;
+	position: relative;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	padding: $footer-padding;
+	background-color:$footer-background-color;
+	hr {
+		position: relative;
+		display: block;
+		background-color: rgba(#ddd, .2);
+		width: 100%;
+	}
+}
+
+/* - Newsletter Form - */
+
+form.newsletter-form {
+	max-width:500px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 48px;
+	input {
+		max-width: 400px;
+		height: 50px;
+		float: left;
+		border-right: 0px !important;
+		font-size: 16px;
+		@media (max-width: 991px ) {
+			max-width: 80%;
+			margin-bottom: 48px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		@media (max-width: 468px) {
+			max-width: 190px;
+		}
+		&::-webkit-input-placeholder {
+			font-size: 12px;
+			padding-top: 4px;
+		}
+		&:focus::-webkit-input-placeholder {
+			color: #ddd;
+			@include transition(.2s);
+		}
+	}
+	button {
+		@include border-radius(0px);
+		background-color: rgba($brand-secondary, 1);
+		color: $text-color-alternative;
+		border:0px;
+		height: 50px;
+		float: left;
+		font-size: 12px;
+		padding: 0 20px;
+		font-weight: 900;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		@include transition(.2s);
+		&:hover {
+			background-color: rgba($brand-primary, 1);
+		}
+	}
+	small {
+		display: block;
+		position: relative;
+		font-style: italic;
+		display: none;
+	}
+}
+
+/* - Social icons - */
+
+ul.social-icons {
+	list-style:none;
+	padding-top: 0px;
+	display: inline-block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0 !important;
+	padding-bottom: 0px;
+	 li {
+	cursor: pointer;
+	display: inline-block;
+	@include transition(.2s);
+	margin: 0 10px;
+	margin-top: 14px;
+		&:last-child {
+			margin-right: 0;
+		}
+		a {
+			font-size: 10px;
+			font-weight: 600;
+			letter-spacing: 1px;
+		}
+	}
+}
+
+/* -  Copyright - */
+
+.footer-message {
+	font-size: 13px;
+	margin-top: 14px;
+	margin-bottom: 10px;
+	display: block;
+	opacity: .9;
+	color: $text-color;
+}
+
+.footer-message a {
+	opacity: .9 !important;
+	color: #fff !important;
+	&:hover {
+		color: $brand-primary !important;
+	}
+}
+
+.footer-message i {
+	color: red
+}

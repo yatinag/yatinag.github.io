@@ -1,0 +1,64 @@
+/* CONTACT PAGE */
+/* ===================================== */
+
+/* - Contact Form - */
+
+/* - Form - */
+
+#contact_form {
+	.form-control {
+		margin-bottom: 24px;
+		padding: 24px;
+		background-color: lighten($section-semi-white,  6%);
+		border:1px solid rgba($brand-secondary, .1) !important;
+		font-size: 16px;
+		color: #131313;
+		-moz-box-sizing: border-box;
+		height: 100%;
+		&:active,
+		&:focus {
+			outline: none !important;
+			box-shadow: none;
+			border:1px solid rgba($brand-secondary, .5) !important;
+		}
+		&::-webkit-input-placeholder {
+			font-size: 12px;
+			padding-top: 4px;
+		}
+		&:-moz-placeholder {
+			font-size: 12px;
+			padding-top: 4px;
+		}
+		&::-moz-placeholder {
+			font-size: 12px;
+			padding-top: 4px;
+		}
+		&:-ms-input-placeholder {
+			font-size: 12px;
+			padding-top: 4px;
+		}
+		&:focus::-webkit-input-placeholder {
+			color: #ddd;
+			@include transition(.2s);
+		}
+		&:focus:-moz-placeholder {
+			color: #ddd;
+			@include transition(.2s);
+		}
+		&:focus::-moz-placeholder {
+			color: #ddd;
+			@include transition(.2s);
+		}
+		&:focus:-ms-input-placeholder {
+			color: #ddd;
+			@include transition(.2s);
+		}
+	}
+	textarea {
+		min-height: 300px;
+	}
+	button[type="submit"] {
+		@extend .btn-black;
+		background-color: transparent;
+	}
+}
