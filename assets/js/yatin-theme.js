@@ -40,6 +40,7 @@ Main Theme JS file
     var divq = document.getElementById('amazing-quote');
     divq.innerHTML = divq.innerHTML + content_quote;
 
+
 'use strict';
 
 
