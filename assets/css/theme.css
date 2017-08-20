@@ -36,6 +36,9 @@ This is the file you need to edit to change the look of the theme.
 /* COMPONETS */
 /* ===================================== */
 /* - General Section Classes - */
+.magical{
+    font-size: 1em;
+}
 
 #sexy{
     width: 100%;
