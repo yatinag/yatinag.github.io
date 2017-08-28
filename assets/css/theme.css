@@ -260,6 +260,37 @@ section.header-introduction .section-head h2 {
   font-weight: 900;
 }
 
+
+.header-introduction-smalling {
+  padding-top: 250px;
+  padding-bottom: 150px;
+  min-height: 300px !important;
+  position: relative;
+}
+
+.header-introduction-smalling .section-head span {
+  font-size: 16px;
+}
+
+.header-introduction-smalling .section-head h2 {
+  font-weight: 900;
+  letter-spacing: 0;
+  font-size: 110px;
+}
+
+@media (max-width: 991px) {
+  .header-introduction-smalling .section-head h2 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-introduction-smalling .section-head h2 {
+    font-size: 50px;
+  }
+}
+
+
 .header-introduction-small {
   padding-top: 250px;
   padding-bottom: 150px;
