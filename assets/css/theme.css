@@ -40,8 +40,105 @@ This is the file you need to edit to change the look of the theme.
     font-size: 1em;
 }
 
+
 #swspecial{
     color: white;	
+}
+
+$inputWidth: 400px;
+$inputHeight: 70px;
+$animationColor: #F54E4E;
+
+
+.centery {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 570px;
+  height: 40px;
+}
+.input {
+  height: 40px;
+  width: 350px;
+  background-color: white;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.textZone {
+  position: relative;
+  padding-left: 8px;
+  top: 4px;
+  width: 340px;
+  height: 30px;
+  outline: none;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: text;
+}
+
+.cursor {
+  width: 1px;
+  height: 100%;
+  background-color: #222222;
+  display: inline-block;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.character, .placeholder {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  font-family: sillyyeti, sans-serif;
+  font-size: 24px;
+  color: #111111;
+}
+
+.placeholder {
+  color: #BFBFBF;
+}
+
+.space {
+  display: inline-block;
+  width: 7.2px;
+  height: 100%;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes colorTransition {
+  0% {
+    color: #111111;
+  }
+  50% {
+    color: #F54E4E;
+  }
+  75% {
+    color: #555555;
+  }
+  100% {
+    color: #111111;
+  }
+}
+
+.selection {
+  animation-duration: 100ms;
 }
 
 #sexy{
@@ -2082,13 +2179,18 @@ p {
   line-height: 28px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h4, h5, h6:not(#syheader) {
   margin: 0;
   position: relative;
   z-index: 1;
   font-family: "Josefin Sans", sans-serif !important;
 }
-
+h3:not(#syheader) {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-family: "Josefin Sans", sans-serif !important;
+}
 h1.headings-caps, h2.headings-caps, h3.headings-caps, h4.headings-caps, h5.headings-caps, h6.headings-caps {
   text-transform: uppercase;
 }
@@ -12741,4 +12843,26 @@ form.search_form small {
 
 ul.instagram_widget li img {
   width: 100%;
+}
+
+
+@font-face {
+  font-family: Sillyyeti;
+  src: url("../fonts/SillyYeti-Regular.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+.sillyyeti{
+    font-family: Sillyyeti, sans-serif;
+}
+#sypara{
+    font-family: Sillyyeti, sans-serif;
+    font-size: 30px;
+}
+#syheader{
+    text-transform: uppercase;
+    color:white;    
+    text-shadow: 1px 0 white;
+    letter-spacing:1px;
+    font-weight:bold;
 }
