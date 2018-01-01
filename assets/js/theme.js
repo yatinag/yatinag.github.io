@@ -156,5 +156,265 @@ jQuery(document).ready(function( $ ) {
 		event.preventDefault();
 		{$('html, body').velocity('scroll',{duration: 1000, offset:0});}
 	});
+	var _class, _temp;
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Input = function () {
+    function Input(input, placeholder) {
+        _classCallCheck(this, Input);
+
+        this.isFocused = false;
+        this.size = 0;
+        this.animation = "jello";
+        $(input).addClass("input");
+        this.$element = $(document.createElement("div"));
+        this.$element.addClass("textZone");
+        this.$element.attr("tabindex", 0);
+        $(input).append(this.$element);
+        this.cursor = new Cursor(this);
+        this.setEvents();
+        Keyboard.readCharacters(this);
+        Keyboard.readSpecialCharacters(this);
+        this.placeholder = new Placeholder(placeholder, this);
+    }
+
+    _createClass(Input, [{
+        key: "setEvents",
+        value: function setEvents() {
+            var input = this;
+
+            this.$element.on("click", function (event) {
+                input.focus();
+                event.stopPropagation();
+            });
+
+            $(document).on("click", function (event) {
+                input.unfocus();
+            });
+        }
+    }, {
+        key: "focus",
+        value: function focus() {
+            if (this.size == 0) {
+                this.$element.prepend(this.cursor.$element);
+            } else {
+                this.cursor.$element.insertAfter(this.$element.children().last());
+            }
+            this.cursor.show();
+            this.isFocused = true;
+        }
+    }, {
+        key: "unfocus",
+        value: function unfocus() {
+            if (this.size == 0) {
+                this.placeholder.show();
+            }
+            this.cursor.hide();
+            this.isFocused = false;
+        }
+    }, {
+        key: "write",
+        value: function write(character) {
+            this.size++;
+            this.placeholder.hide();
+            character.setEvents(this);
+            character.$element.insertAfter(this.cursor.$element);
+            character.animate(this.animation);
+            this.cursor.move("right");
+        }
+    }, {
+        key: "erase",
+        value: function erase() {
+            var last = this.cursor.$element.prev();
+            if (last.length && this.size > 0) {
+                this.size--;
+                this.cursor.move("left");
+                last.remove();
+                if (this.size == 0) {
+                    this.placeholder.show();
+                }
+            }
+        }
+    }, {
+        key: "suppress",
+        value: function suppress() {
+            var next = this.cursor.$element.next();
+            if (next.length && this.size > 0) {
+                this.size--;
+                next.remove();
+                if (this.size == 0) {
+                    this.placeholder.show();
+                }
+            }
+        }
+    }]);
+
+    return Input;
+}();
+
+var Placeholder = function () {
+    function Placeholder(placeholder, input) {
+        _classCallCheck(this, Placeholder);
+
+        this.input = input;
+        this.$element = $(document.createElement("div"));
+        this.$element.text(placeholder);
+        this.$element.addClass("placeholder");
+        this.show();
+    }
+
+    _createClass(Placeholder, [{
+        key: "show",
+        value: function show() {
+            this.input.$element.append(this.$element);
+        }
+    }, {
+        key: "hide",
+        value: function hide() {
+            this.$element.remove();
+        }
+    }]);
+
+    return Placeholder;
+}();
+
+var Keyboard = (_temp = _class = function () {
+    function Keyboard() {
+        _classCallCheck(this, Keyboard);
+    }
+
+    _createClass(Keyboard, null, [{
+        key: "readCharacters",
+        value: function readCharacters(input) {
+            input.$element.on("keypress", function (event) {
+                event.preventDefault();
+                input.write(new Character(String.fromCharCode(event.which)));
+            });
+        }
+    }, {
+        key: "readSpecialCharacters",
+        value: function readSpecialCharacters(input) {
+            input.$element.on("keydown", function (event) {
+                switch (event.keyCode) {
+                    case Keyboard.backspace:
+                        event.preventDefault();
+                        input.erase();
+                        break;
+                    case Keyboard.leftArrow:
+                        input.cursor.move("left");
+                        break;
+                    case Keyboard.rightArrow:
+                        input.cursor.move("right");
+                        break;
+                    case Keyboard.suppress:
+                        input.suppress();
+                        break;
+                    case Keyboard.top:
+                        input.cursor.goTo("top");
+                        break;
+                    case Keyboard.end:
+                        input.cursor.goTo("end");
+                        break;
+                    default:
+                        break;
+                }
+            });
+        }
+    }]);
+
+    return Keyboard;
+}(), _class.space = 32, _class.backspace = 8, _class.leftArrow = 37, _class.rightArrow = 39, _class.suppress = 46, _class.top = 36, _class.end = 35, _temp);
+
+var Cursor = function () {
+    function Cursor(input) {
+        _classCallCheck(this, Cursor);
+
+        this.$element = $(document.createElement("div"));
+        this.$element.addClass("cursor");
+        this.$element.addClass("hidden");
+        input.$element.prepend(this.$element);
+    }
+
+    _createClass(Cursor, [{
+        key: "show",
+        value: function show() {
+            this.$element.removeClass("hidden");
+        }
+    }, {
+        key: "hide",
+        value: function hide() {
+            this.$element.addClass("hidden");
+        }
+    }, {
+        key: "move",
+        value: function move(direction) {
+            var offSet = this.$element.get(0).offsetLeft;
+            var textZone = this.$element.parent();
+
+            if (direction == "right") {
+                var next = this.$element.next();
+                this.$element.insertAfter(next);
+                if (offSet > textZone.width() * 0.99) {
+                    var scroll = textZone.scrollLeft();
+                    textZone.animate({ scrollLeft: scroll + '100' }, 1000);
+                }
+            } else if (direction == "left") {
+                var prev = this.$element.prev();
+                this.$element.insertBefore(prev);
+            }
+        }
+    }, {
+        key: "goTo",
+        value: function goTo(point) {
+            if (point == "top") {
+                this.$element.parent().prepend(this.$element);
+            } else if (point == "end") {
+                this.$element.parent().append(this.$element);
+            }
+        }
+    }]);
+
+    return Cursor;
+}();
+
+var Character = function () {
+    function Character(character) {
+        _classCallCheck(this, Character);
+
+        this.$element = $(document.createElement("div"));
+        if (character != " ") {
+            this.$element.addClass("character");
+            this.$element.text(character);
+        } else {
+            this.$element.addClass("space");
+        }
+    }
+
+    _createClass(Character, [{
+        key: "setEvents",
+        value: function setEvents(input) {
+            var character = this;
+            this.$element.on("click", function (event) {
+                input.cursor.$element.insertBefore(character.$element);
+                if (!input.isFocused) {
+                    input.cursor.show();
+                }
+                event.stopPropagation();
+            });
+        }
+    }, {
+        key: "animate",
+        value: function animate(animation) {
+            this.$element.css("animation", animation + " 500ms, colorTransition 500ms");
+        }
+    }]);
+
+    return Character;
+  }();
+
+  var input = new Input("#myInput", "Type Here!");
+	
 });
