@@ -1,0 +1,54 @@
+
+#eelcontainer {
+	position: absolute;
+	width: 640px;
+	height: 480px;
+	margin-left: -320px;
+	margin-top: -270px;
+	left: 50%;
+	top: 50%;
+	overflow: hidden;
+	background: black;
+}
+
+
+
+#allimages {
+	position: absolute;
+	display: none;
+	opacity: 0;
+}
+
+.eelimages {
+	position: absolute;
+}
+
+/*#eelimage1 {
+	left: 0;
+}
+
+#eelimage2 {
+	left: 27520px;
+}*/
+
+#eelimage1 {
+	left: 0;
+}
+
+#eelimage2 {
+	left: 15360px;
+}
+
+#eelimage3 {
+	left: 30080px;
+}
+
+#eelimage4 {
+	left: 45440px;
+}
+
+.slapheading{
+    font-family: 'Josefin Sans';
+}
+
+
