@@ -40,6 +40,12 @@ This is the file you need to edit to change the look of the theme.
     font-size: 1em;
 }
 
+.weekly-index {
+    height: 3%;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
 
 #swspecial{
     color: white;	
