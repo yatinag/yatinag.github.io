@@ -4,8 +4,8 @@
     <meta charset="utf-8"/>
     <title>Yeti Weekly | The Yatin Agarwal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Lord Palpatine has arisen, you have found his secret hideout. Enjoy Yatin Agarwal’s work while you still can before his complete resurrection on this website, or contact to inform the Jedi of any happenings.">
-    <meta name="keywords" content="yatin, agarwal, starwars, star, wars design, coding, animation, projects">
+    <meta name="description" content="Discover The Yeti Weekly, find a new icon along with each week's word said in a new voice, that is designed freshly to signify the weekly changes in the lives of Yatin.">
+    <meta name="keywords" content="yatin, agarwal, weekly, content, yeti weekly, yeti, projects">
     <meta name="author" content="Yatin Agarwal">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -64,6 +64,10 @@
         }
     </style>
     <script>
+        var week1= new Audio();
+        week1.src = 'assets/images/weekly/audios/week1.mp3';
+    </script>    
+    <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -75,9 +79,6 @@
     </script>
   </head>
   <body>
-    <audio autoplay loop>
-      <source src="assets/weekly.mp3">
-    </audio>
     <header class="main-navigation">
       <div class="container-fluid">
         <div class="col-md-2"><a href="index" class="logo"><img src="assets/images/logo/yeti-logo.png" alt="Logo"/></a>
@@ -115,12 +116,12 @@
             <p>Discover a new Symbol, with a new word each week!</p>
             <div class="gallery">
               <div class="desc">FREEDOM</div>   
-              <img class="weekly-img" src="assets/images/weekly/colored/week1-colored.png" alt="Week-1" width="100%" height="100%" value="PLAY"  onclick="play()">  
+              <img class="weekly-img" src="assets/images/weekly/colored/week1-colored.png" alt="Week-1" width="100%" height="100%" onmouseover="week1.play();">  
               <div class="desc">Week 1 (26thMarch)</div>
             </div>
         </div> 
       </div>
-    </section>  
+    </section>    
     <section>
       <div class="container">
         <hr/>  
