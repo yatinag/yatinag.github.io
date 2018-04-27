@@ -9,6 +9,38 @@ Main Theme JS file
 =========================================================================
  */
 
+    var content_quote_nika;
+    var randomNumber2 = Math.floor(Math.random() * 13)+1;
+    if (randomNumber2 == 1) {
+    content_quote_nika='PROXIMITY';
+    } else if (randomNumber2 == 2) {
+    content_quote_nika='AFFECTION';
+    } else if (randomNumber2 == 3) {
+    content_quote_nika='ETHEREAL';
+    } else if (randomNumber2 == 4) {
+    content_quote_nika='LIMERENCE';
+    } else if (randomNumber2 == 5) {
+    content_quote_nika='ELOQUENCE';
+    } else if (randomNumber2 == 6) {
+    content_quote_nika='BREVITY';
+    } else if (randomNumber2 == 7) {
+    content_quote_nika='MELLIFLUOUS';
+    } else if (randomNumber2 == 8) {
+    content_quote_nika='INEFFABLE';
+    } else if (randomNumber2 == 9) {
+    content_quote_nika='SERENDIPITY';
+    } else if (randomNumber2 == 10) {
+    content_quote_nika='IRIDESCENT';
+    } else if (randomNumber2 == 11) {
+    content_quote_nika='SYZGY';
+    } else if (randomNumber2 == 12) {
+    content_quote_nika='PHOSPHENES';
+    } else{
+    content_quote_nika='NEFARIOUS';
+    }  
+    var divq = document.getElementById('amazing-quote-nika');
+    divq.innerHTML = divq.innerHTML + content_quote_nika;
+
 
 $("#secret").click(function() {
     $("body").children().each(function() {
