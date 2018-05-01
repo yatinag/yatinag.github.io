@@ -9,39 +9,6 @@ Main Theme JS file
 =========================================================================
  */
 
-    var content_quote_nika;
-    var randomNumber2 = Math.floor(Math.random() * 13)+1;
-    if (randomNumber2 == 1) {
-    content_quote_nika='PROXIMITY';
-    } else if (randomNumber2 == 2) {
-    content_quote_nika='AFFECTION';
-    } else if (randomNumber2 == 3) {
-    content_quote_nika='ETHEREAL';
-    } else if (randomNumber2 == 4) {
-    content_quote_nika='LIMERENCE';
-    } else if (randomNumber2 == 5) {
-    content_quote_nika='ELOQUENCE';
-    } else if (randomNumber2 == 6) {
-    content_quote_nika='BREVITY';
-    } else if (randomNumber2 == 7) {
-    content_quote_nika='MELLIFLUOUS';
-    } else if (randomNumber2 == 8) {
-    content_quote_nika='INEFFABLE';
-    } else if (randomNumber2 == 9) {
-    content_quote_nika='SERENDIPITY';
-    } else if (randomNumber2 == 10) {
-    content_quote_nika='IRIDESCENT';
-    } else if (randomNumber2 == 11) {
-    content_quote_nika='SYZGY';
-    } else if (randomNumber2 == 12) {
-    content_quote_nika='PHOSPHENES';
-    } else{
-    content_quote_nika='NEFARIOUS';
-    }  
-    var divq = document.getElementById('amazing-quote-nika');
-    divq.innerHTML = divq.innerHTML + content_quote_nika;
-
-
 $("#secret").click(function() {
     $("body").children().each(function() {
         $(this).html($(this).html().replace(/01010111 01101000 01100001 01110100 00100000 01100100 01101001 01100100 00100000 01110100 01101000 01100101 00100000 01110000 01101111 01110100 01100001 01110100 01101111 00100000 01110011 01100001 01111001 00100000 01110100 01101111 00100000 01110100 01101000 01100101 00100000 01101011 01100101 01110100 01100011 01101000 01110101 01110000 00100000 01100010 01101111 01110100 01110100 01101100 01100101 00111111 00100000 01010111 01100101 01101100 01101100 00101100 00100000 01101110 01101111 01110100 01101000 01101001 01101110 01100111 00100000 01110011 01101001 01101100 01101100 01111001 00100000 01100010 01100101 01100011 01100001 01110101 01110011 01100101 00100000 01110000 01101111 01110100 01100001 01110100 01101111 01100101 01110011 00100000 01100100 01101111 01101110 00100111 01110100 00100000 01110011 01110000 01100101 01100001 01101011 00101110/g,"What did the potato say to the ketchup bottle? Well, nothing silly because potatoes don't speak."));
