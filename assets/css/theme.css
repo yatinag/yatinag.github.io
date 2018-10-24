@@ -12875,15 +12875,16 @@ ul.instagram_widget li img {
 .blogheader {
     text-transform: uppercase;
     text-shadow: 1px 0 white;
-    letter-spacing:1px;
     font-weight:bold;
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 20px;
 }
 @media (max-width: 700px) {
-    .blogheader {
-        font-size: 30px;
+    #blogspl {
+        font-size: 32px;
+        padding-right: none;
+        padding-left: none;
     }
     #blogfinder iframe{ 
         width: 100%;
