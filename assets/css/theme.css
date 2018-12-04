@@ -12889,13 +12889,18 @@ ul.instagram_widget li img {
     #blogfinder iframe{ 
         width: 100%;
     }
+    #boomgraph{
+        width: 90%;
+    }
 }
 #r1ablog p{
     font-size: 17px;
     text-align:justify;
     font-family: "Josefin Sans", georgia
 }
-
+#moveitdown {
+    margin-bottom: 20px;
+}
 #artspl {
     font-size: 20px;
 }
