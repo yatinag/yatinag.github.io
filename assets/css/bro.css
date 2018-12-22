@@ -1,0 +1,72 @@
+body{
+    overflow: hidden;
+    background-color: #b66770;
+}
+
+#bro {
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+}
+
+.boom {
+    font-size: 140px;
+    color: white;
+    font-family: 'Work Sans';
+    z-index: 1000;
+    position: relative;
+}
+
+#count { 
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 3px solid white;
+    float: left;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#track {
+    padding: 10px;
+    border: 3px solid white;
+    width: 150px;
+    float: left;
+    margin: 0;
+    position: absolute;
+    top: 65%;
+}
+
+#count h2, #track h2 {
+    font-family: 'Work Sans';
+    font-size: 30px;
+    color: white;
+}
+
+#dude {
+    font-family: 'Work Sans';
+    padding: 10px;
+    font-size: 100px;
+    border: 3px solid white;
+    color: white;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    position: inherit;
+}
+
+@media (max-width: 900px) {
+    #dude { font-size: 70px; }
+}
+
+@media (max-width: 500px) {
+    #dude { font-size: 50px; }
+}
+
+@media (min-width: 850px) {
+    #bro { left: 400px; }
+    #count, #track { left: 100px;}
+}
