@@ -12880,6 +12880,24 @@ ul.instagram_widget li img {
     padding-right: 25px;
     padding-bottom: 20px;
 }
+#tadada a {
+    position: absolute;
+    filter: drop-shadow(1px 2px 3px black);
+    margin-top: 150px;
+    margin-left: 50px;
+}
+#inspire {
+    width: 400px;
+    filter: drop-shadow(3px 2px 3px #4d4d4d);
+    left: 500px;
+    position: absolute;
+    margin-left: 600px;
+}
+@media (max-width: 1200px) {
+    #inspire{
+        margin-left: 400px;
+    }
+}
 @media (max-width: 700px) {
     #blogspl {
         font-size: 32px;
@@ -12892,15 +12910,67 @@ ul.instagram_widget li img {
     #boomgraph{
         width: 90%;
     }
+    #inspire{
+        margin-left: 0px;
+        width: 350px;
+    }    
+    #tadada a {
+        margin-top: 300px;
+    }
 }
 #r1ablog p{
     font-size: 17px;
     text-align:justify;
-    font-family: "Josefin Sans", georgia
+    font-family: "Josefin Sans", georgia;
 }
 #moveitdown {
     margin-bottom: 20px;
 }
 #artspl {
     font-size: 20px;
+}
+#color-grad h2 {
+    filter: drop-shadow(1px 2px 3px black);
+}
+#color-grad {
+    background: linear-gradient(-40deg, #003471, #044d7d, #0072bc, #1cbbb4, #1cbb65, #00a651, #007236, #005826, #005e20);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

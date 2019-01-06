@@ -23,8 +23,8 @@ function magic() {
 
 function smaller() {
     document.querySelector("#bro").style.height = "85%";
-    randomNumber = Math.floor(Math.random() * 3)+2;
-    document.querySelector("#bro").setAttribute("src", "assets/img/"+String(randomNumber)+".png");
+    randomNumber2 = Math.floor(Math.random() * 3)+2;
+    document.querySelector("#bro").setAttribute("src", "assets/img/"+String(randomNumber2)+".png");
 }
 
 function larger() {
