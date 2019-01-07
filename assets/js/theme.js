@@ -18,10 +18,6 @@ $("#secret").click(function() {
 
 'use strict';
 
-//parallax by mouse position
-
-var scene = document.getElementById('tadada');
-var parallaxInstance = new Parallax(scene);
 
 jQuery(document).ready(function( $ ) {
 
