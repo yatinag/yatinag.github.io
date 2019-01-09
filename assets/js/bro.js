@@ -1,7 +1,7 @@
-var count = 0;
+localStorage.count = 0;
 
 function magic() {
-    if (count == 24) {
+    if (localStorage.count == 24) {
         noblast();
     }
     randomNumber = Math.floor(Math.random() * 4)+1;
@@ -14,9 +14,9 @@ function magic() {
     } else{
         document.body.style.backgroundColor = "#70b667";
     }
-    count = count + 1;
-    document.querySelector("#numbercounter").innerHTML = count;
-    if (count == 23) {
+    localStorage.count = Number(localStorage.count) + 1;
+    document.querySelector("#numbercounter").innerHTML = localStorage.count;
+    if (localStorage.count == 23) {
         blast();
     }
 }
@@ -40,4 +40,4 @@ function noblast() {
     document.querySelector(".boom").style.display = "none";
 }
 
-document.querySelector("#numbercounter").innerHTML = count;
+document.querySelector("#numbercounter").innerHTML = localStorage.count;
