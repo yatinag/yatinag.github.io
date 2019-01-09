@@ -82,11 +82,18 @@
         <div id="tadada">    
         <img src="assets/images/inspiration.png" id="inspire" data-depth="0.9"/>
         <h2 id="inspiring-title" data-depth="0.26">Inspiration</h2>
-        <a class="btn btn-white" data-depth="0.5">You have to progress humanity</a>    
+        <a class="btn btn-white" data-depth="0.5">You have to progress humanity</a> 
         </div>    
+        <div class="form-group">
+            <select id="score-selector">
+              <option value="">Rate your day's efforts:</option>
+            </select>
         </div>
-      </div>
-    </section>
+        <h1 id="self-score"></h1>
+        <p class="hider" id="recent-score">most recent score:</p>    
+        </div>
+      </div>        
+    </section>  
     <footer>
       <div class="container">
         <div class="col-md-6 text-left small-screen-text-center">
@@ -105,12 +112,26 @@
     <script src="assets/js/packages.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="assets/js/theme.js"></script>
-    <script src="assets/js/map.js"></script>
     <script>
         //parallax by mouse position
         var scene = document.getElementById('tadada');
         var parallaxInstance = new Parallax(scene);
-    </script>
-  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+        var lala = document.getElementById('score-selector');
+        for (i = 0; i < 100; i++) {
+            lala.innerHTML += '<option value="'+i+'">'+i+'</option>';
+        }
+        lala.addEventListener(
+            "change",
+            function() {
+                if(lala.options[lala.selectedIndex].value != ""){
+                    document.getElementById('self-score').innerHTML = lala.options[lala.selectedIndex].value;
+                    document.getElementById('recent-score').classList.remove('hider');
+                    lala.classList.add('hider');
+                }
+            },
+            false 
+        );
+    </script>  
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>  
   </body>
 </html>

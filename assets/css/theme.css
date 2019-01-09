@@ -12883,8 +12883,24 @@ ul.instagram_widget li img {
 #tadada a {
     position: absolute;
     filter: drop-shadow(1px 2px 3px black);
-    margin-top: 150px;
     margin-left: 50px;
+}
+#self-score {
+    font-size: 300px;
+    position: absolute;
+    margin-top: 25px;
+    filter: opacity(50%);
+    margin-left: 150px;
+}
+#recent-score {
+    position: absolute;
+    margin-top: 100px;
+    filter: drop-shadow(1px 2px 3px black);
+    font-size: 13px;
+    z-index: 2;
+}
+.hider {
+    visibility: hidden;
 }
 #inspire {
     width: 400px;
@@ -12896,6 +12912,10 @@ ul.instagram_widget li img {
 @media (max-width: 1200px) {
     #inspire{
         margin-left: 400px;
+    }
+    #self-score {
+        font-size: 210px;
+        margin-top: 50px;
     }
 }
 @media (max-width: 700px) {
@@ -12915,7 +12935,11 @@ ul.instagram_widget li img {
         width: 350px;
     }    
     #tadada a {
-        margin-top: 300px;
+        margin-left: 10px;
+    }
+    #self-score {
+        font-size: 160px;
+        margin-top: 60px;
     }
 }
 #r1ablog p{
@@ -12923,14 +12947,26 @@ ul.instagram_widget li img {
     text-align:justify;
     font-family: "Josefin Sans", georgia;
 }
-#moveitdown {
-    margin-bottom: 20px;
-}
 #artspl {
     font-size: 20px;
 }
+#score-selector {
+    background-color: transparent;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    border-color: white;
+    border-radius: 0px;
+    filter: drop-shadow(1px 2px 3px black);
+    border-width: 2px;
+}
+.form-group {
+    z-index: 5;
+}
 #color-grad h2 {
     filter: drop-shadow(1px 2px 3px black);
+    margin-top: 70px;
 }
 #color-grad {
     background: linear-gradient(-40deg, #003471, #044d7d, #0072bc, #1cbbb4, #1cbb65, #00a651, #007236, #005826, #005e20);
