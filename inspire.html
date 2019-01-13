@@ -90,10 +90,10 @@
             </select>
         </div>
         <h1 id="self-score"></h1>
-        <p class="hider" id="recent-score">most recent score:</p>    
+        <p class="hider" id="recent-score">Score on <span id="datehere"></span>:</p>    
         </div>
       </div>        
-    </section>  
+    </section> 
     <footer>
       <div class="container">
         <div class="col-md-6 text-left small-screen-text-center">
@@ -124,7 +124,47 @@
             "change",
             function() {
                 if(lala.options[lala.selectedIndex].value != ""){
-                    document.getElementById('self-score').innerHTML = lala.options[lala.selectedIndex].value;
+                    var d = new Date();
+                    var day = d.getDate();
+                    var month = d.getMonth();
+                    if (month == 0) {
+                        monthname = "January";
+                    } else if (month == 1) {
+                        monthname = "Feburary";
+                    } else if (month == 2) {
+                        monthname = "March";
+                    } else if (month == 3) {
+                        monthname = "April";
+                    } else if (month == 4) {
+                        monthname = "May";
+                    } else if (month == 5) {
+                        monthname = "June";
+                    } else if (month == 6) {
+                        monthname = "July";
+                    } else if (month == 7) {
+                        monthname = "August";
+                    } else if (month == 8) {
+                        monthname = "September";
+                    } else if (month == 9) {
+                        monthname = "October";
+                    } else if (month == 1) {
+                        monthname = "November";
+                    } else {
+                        monthname = "December";
+                    }  
+                    daterecord = monthname + " " + day;
+                    scorerecord = lala.options[lala.selectedIndex].value;
+                    document.getElementById('datehere').innerHTML = daterecord;
+                    document.getElementById('self-score').innerHTML = scorerecord;
+                    if (localStorage.getItem("allrecord")) {
+                        allrecord = JSON.parse(localStorage.getItem("allrecord"));
+                        allrecord[daterecord] = scorerecord;
+                    } else {
+                        var allrecord = {};
+                        allrecord[daterecord] = scorerecord;
+                    }
+                    localStorage.setItem("allrecord", JSON.stringify(allrecord)); 
+                    console.log(JSON.parse(localStorage.getItem("allrecord")));
                     document.getElementById('recent-score').classList.remove('hider');
                     lala.classList.add('hider');
                 }

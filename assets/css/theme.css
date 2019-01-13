@@ -12899,6 +12899,12 @@ ul.instagram_widget li img {
     font-size: 13px;
     z-index: 2;
 }
+#datehere {
+    display: inline;
+    text-transform: capitalize;
+    font-size: 13px;
+    letter-spacing: normal;
+}
 .hider {
     visibility: hidden;
 }
