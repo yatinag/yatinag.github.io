@@ -12888,7 +12888,7 @@ ul.instagram_widget li img {
 #self-score {
     font-size: 300px;
     position: absolute;
-    margin-top: 25px;
+    margin-top: 20px;
     filter: opacity(50%);
     margin-left: 150px;
 }
@@ -12915,13 +12915,41 @@ ul.instagram_widget li img {
     position: absolute;
     margin-left: 600px;
 }
+#outer-record {
+  display: flex; /* displays flex-items (children) inline */
+  overflow-x: auto;
+    min-height: 90px;
+}
+
+#outer-record h2 {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    margin-top: 30px;
+    color: black;
+}
+
+.inner {
+    flex: 0 0 10%; /* doesn't grow nor shrink, initial width set to 25% of the parent's */
+    min-height: 90px; /* just for demo */
+    color: white;
+    font-size: 12px;
+    padding-top: 25px;
+}
+
+
 @media (max-width: 1200px) {
     #inspire{
         margin-left: 400px;
     }
     #self-score {
         font-size: 210px;
-        margin-top: 50px;
+        margin-top: 45px;
+    }
+    .inner {
+        flex: 0 0 10%;
+        font-size: 12px;
+        padding-top: 25px;
     }
 }
 @media (max-width: 700px) {
@@ -12946,6 +12974,11 @@ ul.instagram_widget li img {
     #self-score {
         font-size: 160px;
         margin-top: 60px;
+    }
+    .inner {
+        flex: 0 0 20%;
+        font-size: 12px;
+        padding-top: 25px;
     }
 }
 #r1ablog p{
@@ -13016,3 +13049,13 @@ ul.instagram_widget li img {
 		background-position: 0% 50%;
 	}
 }
+#containschart {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#recordchart {
+    height: 600px;
+    margin: 0;
+    padding: 0;
+}
+
