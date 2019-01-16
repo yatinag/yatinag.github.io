@@ -12918,7 +12918,7 @@ ul.instagram_widget li img {
 #outer-record {
   display: flex; /* displays flex-items (children) inline */
   overflow-x: auto;
-    min-height: 90px;
+    height: 90px;
 }
 
 #outer-record h2 {
@@ -13055,7 +13055,10 @@ ul.instagram_widget li img {
 }
 #recordchart {
     height: 600px;
+    width: 70%;
     margin: 0;
     padding: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 

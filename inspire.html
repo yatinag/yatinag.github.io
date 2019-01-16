@@ -98,13 +98,11 @@
         <h2 id="hidemeplease"><u>No Scores Recorded Yet</u></h2>
     </div>  
     </section>    
-    <!--
     <section id="containschart">      
         <div class="container">
             <div id="recordchart"></div>      
         </div>    
     </section>  
-    -->
     <footer>
       <div class="container">
         <div class="col-md-6 text-left small-screen-text-center">
@@ -135,25 +133,27 @@
             document.getElementById('hidemeplease').classList.add('hider');
             var completerecord = "";
             var i = 0;
+            var pair = [];
+            var data = [];
             for (record in localStorage.getItem("allrecord")) {
                 if (localStorage.getItem("allrecord")[record] == "{" || localStorage.getItem("allrecord")[record] == '"') {
                     continue;
                 } else if (localStorage.getItem("allrecord")[record] == ":") {
                     document.getElementById("outer-record").innerHTML += "<div class='inner' style='background: #0b0b0b'>"+completerecord+"<br><br><h3 style='font-size: 30px'></h3></div>";
+                    pair[0] = completerecord;
                     completerecord = "";
                 } else if (localStorage.getItem("allrecord")[record] == "," || localStorage.getItem("allrecord")[record] == "}") {
                     document.getElementsByClassName("inner")[i].innerHTML += completerecord;
+                    pair[1] = completerecord;
+                    data.push(pair);
+                    pair = [];
                     i += 1;
                     completerecord = "";
                 } else {
                     completerecord += (localStorage.getItem("allrecord")[record]);
                 }
             }
-            var x = document.getElementsByClassName("innerheads");
-            for (var t = 0; t < x.length; t++) {
-                x[t].style.fontSize = "30px";
-            }
-            /*
+            console.log(data);
             anychart.onDocumentReady(function () {
 
                 // create a chart
@@ -161,14 +161,23 @@
 
                 // create a line series and set the data
                 var series = chart.line(data);
-
+                series.name("Score");
+                series.normal().stroke("#0066cc", 2);
+                
+                
                 // set the container id
                 chart.container("recordchart");
+
+                // set the chart title
+                chart.title("Score Records");
+
+                // set the titles of the axes
+                chart.xAxis().title("Day");
+                chart.yAxis().title("Score");
 
                 // initiate drawing the chart
                 chart.draw();
             });
-            */
             var d = new Date();
             var day = d.getDate();
             var month = d.getMonth();
