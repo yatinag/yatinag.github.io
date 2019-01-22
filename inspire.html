@@ -22,7 +22,6 @@
     <link rel="icon" type="image/png" href="assets/images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="assets/images/favicon/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="assets/images/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -98,7 +97,7 @@
         <h2 id="hidemeplease"><u>No Scores Recorded Yet</u></h2>
     </div>  
     </section>    
-    <section id="containschart">      
+    <section id="containschart" class="difhider">      
         <div class="container">
             <div id="recordchart"></div>      
         </div>    
@@ -136,6 +135,7 @@
             var pair = [];
             var data = [];
             for (record in localStorage.getItem("allrecord")) {
+                document.getElementById('containschart').classList.remove('difhider');
                 if (localStorage.getItem("allrecord")[record] == "{" || localStorage.getItem("allrecord")[record] == '"') {
                     continue;
                 } else if (localStorage.getItem("allrecord")[record] == ":") {

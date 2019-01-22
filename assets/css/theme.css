@@ -13053,6 +13053,9 @@ ul.instagram_widget li img {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+.difhider {
+    display: none;
+}
 #recordchart {
     height: 600px;
     width: 70%;
