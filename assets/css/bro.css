@@ -9,7 +9,7 @@ body{
     bottom: 0;
 }
 
-.boom {
+.boom, .boomba {
     font-size: 140px;
     color: white;
     font-family: 'Work Sans';
