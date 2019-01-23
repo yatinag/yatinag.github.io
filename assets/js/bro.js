@@ -17,6 +17,8 @@ function magic() {
         document.querySelector("#numbercounter").innerHTML = localStorage.count;
         if (localStorage.count == 23) {
             blast();
+        } else if (localStorage.count == 1000) {
+            blastoff();
         }
     } else {
         localStorage.count = 0;                                           document.querySelector("#numbercounter").innerHTML = localStorage.count;
@@ -36,6 +38,10 @@ function larger() {
 
 function blast() {
     document.querySelector(".boom").style.display = "block";
+}
+
+function blastoff() {
+    document.querySelector(".boomba").style.display = "block";
 }
 
 function noblast() {
