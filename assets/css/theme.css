@@ -12884,6 +12884,7 @@ ul.instagram_widget li img {
     position: absolute;
     filter: drop-shadow(1px 2px 3px black);
     margin-left: 50px;
+    margin-top: 123px;
 }
 #self-score {
     font-size: 300px;
@@ -13007,6 +13008,15 @@ ul.instagram_widget li img {
     filter: drop-shadow(1px 2px 3px black);
     margin-top: 70px;
 }
+#color-grad-exp {
+    color: black;
+}
+#color-grad-exp h2 {
+    color: white;
+    filter: drop-shadow(1px 2px 3px black);
+    margin-top: 70px;
+}
+
 #color-grad {
     background: linear-gradient(-40deg, #003471, #044d7d, #0072bc, #1cbbb4, #1cbb65, #00a651, #007236, #005826, #005e20);
 	background-size: 400% 400%;
@@ -13065,3 +13075,6 @@ ul.instagram_widget li img {
     margin-right: auto;
 }
 
+.experience-header {
+    color: black;
+}
