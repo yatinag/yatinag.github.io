@@ -189,10 +189,6 @@ a.generic {
   margin-bottom: 1.9375rem;
 }
 
-.hmm {
-    text-decoration: underline;
-}
-
 @media (max-width: 991px) {
     .left-first {
         margin-top: 30px;
