@@ -35,9 +35,10 @@ h1 {
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
 }
+
 ul {
     list-style: none;
 }
@@ -93,7 +94,11 @@ a.special-link {
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
     border: 2px black solid;
-    padding: 5px;
+    border-radius: 25px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-right: 12px;
+    padding-left: 12px;
 }
 
 a.special-link:hover {
@@ -101,8 +106,17 @@ a.special-link:hover {
     color: white;
 }
 
+.first-link {
+    margin-top: 10px;
+    color: black;
+}
+
 a.active {
     border-bottom: 2px black solid;
+}
+
+a.generic {
+    border-bottom: 1px black solid;
 }
 
 .header-container {
@@ -110,20 +124,129 @@ a.active {
 }
 
 .first {
-    margin-top: 100px;
+    height: 600px;
+    padding: 40px;
+    padding-top: 120px;
+    background-color: lightskyblue;
 }
 
 .left-first {
-    background-color: darkblue;
     height: 600px;
 }
 
 .right-first {
-    margin-top: 50px;
+    margin-top: 20px;
     padding: 50px;
     height: 600px;
     color: black;
 }
+
+.phone-img-1 {
+    height: 600px;
+    position: absolute;
+}
+
+.phone-img-2 {
+    height: 580px;
+    margin-left: 200px;
+    margin-top: 50px;
+    position: absolute;
+}
+
+.second {
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    padding: 40px;
+    padding-top: 60px;
+}
+
+.content-second {
+    float: right;
+    text-align: right;
+}
+
+.table {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.table__legend, .column {
+  flex: 1;
+}
+
+.table__legend {
+  margin-top: 4.5625rem;
+  color: #666;
+}
+
+.column {
+  margin-right: 1.875rem;
+}
+
+.table__block {
+  margin-bottom: 1.9375rem;
+}
+
+.hmm {
+    text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+    .left-first {
+        margin-top: 30px;
+    }
+    .phone-img-1 {
+        height: 500px;
+    }
+    .phone-img-2 {
+        height: 480px;
+    }
+    .right-first {
+        margin-top: -130px;
+    }
+    .second {
+        margin-top: 220px;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .second {
+        margin-top: 270px;
+    }
+    .column {
+    margin: 0 10px;
+    width: 100%;
+    }
+
+    .table__item {
+    display: inline-block;
+    font-size: 0.9375rem;
+    }
+    .table__item:not(:last-child):after {
+    content: ",";
+    }
+
+    .table__legend {
+    display: none;
+    }
+
+    .table__block {
+    margin-bottom: 0.9375rem;
+    }
+    .table__block:before {
+    content: attr(data-type);
+    display: block;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+    margin: 10px 0 5px 0;
+    }
+}
+
 /*
 button {
   position: relative;
