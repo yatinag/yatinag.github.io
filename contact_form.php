@@ -13,12 +13,12 @@ $mail->IsSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';                       // Specify main and backup server
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 //This is the email that you need to set so PHPMailer will send the email from 
-$mail->Username = 'yatin.agarwal.9@gmail.com';             // SMTP username
+$mail->Username = 'yatinagarwal9@gmail.com';             // SMTP username
 $mail->Password = '42isthekeytoLIFE';                           // SMTP password
 $mail->SMTPSecure = 'tls';
 $mail->Port = 587;                                    // TCP port to connect to
 // Add the address to send the mail to
-$mail->AddAddress('yatin.agarwal.9@gmail.com');
+$mail->AddAddress('yatinagarwal9@gmail.com');
 $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
 $mail->IsHTML(true);                                  // Set email format to HTML
 
