@@ -1,89 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <title>Decisions | Yatin Agarwal</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="I'm influenced by biases in all decisions I make. Through a poem, I try to analyze and argue for good cost models to determine what biases I should side with.">
-    <meta name="keywords" content="poem, decisions, stars, fortune, yatin, agarwal, yatin agarwal projects, creative, projects">
-    <meta name="author" content="Yatin Agarwal">
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="apple-touch-fullscreen" content="yes"/><link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" href="assets/images/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="assets/images/favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="assets/images/favicon/favicon-16x16.png" sizes="16x16">
-    <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <!-- Google Fonts--><link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-    <!-- MAIN STYLESHEETS-->
-    <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="assets/css/theme.css" type="text/css" media="all"/>
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css'>
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+document.getElementById("rhyming-btn").onclick = function() {rhymeFn()};
 
-  ga('create', 'UA-104911470-1', 'auto');
-  ga('send', 'pageview');
+function rhymeFn() {
+  document.getElementById("sypara").innerHTML = "This will eventually rhyme."
+  document.getElementById("change-color").style.backgroundColor = "#000"
+}
 
-</script>  
-  </head>
-  <body>
-    <div class="loading text-center vertical-middle">
-      <div class="row"><img src="assets/images/loader.gif" width="60" alt="Loader logo" class="loader"/><img src="assets/images/logo/yeti-logo.png" width="60" alt="Loader logo" class="loader-logo"/>
-      </div>
-    </div>
-    <header class="main-navigation">
-      <div class="container-fluid">
-        <div class="col-md-2"><a href="/index" class="logo"><img src="assets/images/logo/yeti-logo.png" alt="Logo"/></a>
-          <div id="navicon">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
-        </div>
-        <div class="col-md-10">
-          <nav>
-            <ul role="menu">
-              <li><a href="/index">HOME</a></li>
-              <li><a href="/about">ABOUT</a></li>
-              <li><a href="/random">RANDOM</a></li>
-              <a href="/reaching-god" class="btn btn-white os-animation">Reaching God</a>      
-            </ul>
-          </nav>
-        </div>
-        <div class="mobile-navigation vertical-middle text-center">
-          <ul role="menu" class="text-center">
-            <li><a href="/index">HOME</a></li>
-            <li><a href="/about">ABOUT</a></li>
-            <li><a href="/random">RANDOM</a></li>
-            <li><a href="/reaching-god" class="btn btn-white os-animation">Reaching God</a></li> 
-          </ul>
-        </div>
-      </div>
-    </header>  
-    <section class="section" id="change-color" style="background-color: #131313;">
-      <div class="container">
-        <div class="col-md-12 text-center">
-          <div class="section-head">
-            <a href="#" class="btn os-animation" id="easy-btn" style="background-color: #3e3e3e; color: white;">Easy</a>
-            <a href="#" class="btn os-animation" id="original-btn" style="background-color: #1a1a1a; color: white;">Original</a>
-            <a href="#" class="btn os-animation" id="rhyming-btn" style="background-color: #000; color: white;">Rhyme</a>
-            <h3 class="sillyyeti" id="syheader" style="margin-top: 30px;">Great stars or I just am?</h3>
-            <p class="sillyyeti" id="sypara" style="margin-top: 20px; color: white;">I wonder where my gratitude lies
+document.getElementById("easy-btn").onclick = function() {easyFn()};
+
+
+function easyFn() {
+  document.getElementById("sypara").innerHTML = "This will be eventually be easy to read."
+  document.getElementById("change-color").style.backgroundColor = "#3e3e3e"
+}
+
+
+document.getElementById("original-btn").onclick = function() {originalFn()};
+
+function originalFn() {
+  var originalString = `I wonder where my gratitude lies
 
 These burdens of privileges make me seem ungrateful
 
@@ -790,18 +724,7 @@ Honestly I would have done anything for you
               
 I wish you could have known/appreciated the worth of that         
               
-It's fine Yatin, this is the last time you think of this.
-            </p>
-          </div>
-        </div>  
-      </div>
-    </section>
-    <script src="assets/js/packages.js"></script>
-    <script src="assets/js/theme.js"></script>
-    <script src="assets/js/map.js"></script>
-    <script src="assets/js/contact.js"></script>
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script src="assets/js/rhyme-decisions.js"></script>
-  </body>
-</html>
+It's fine Yatin, this is the last time you think of this.`
+  document.getElementById("sypara").innerHTML = originalString
+  document.getElementById("change-color").style.backgroundColor = "#1a1a1a"
+}
