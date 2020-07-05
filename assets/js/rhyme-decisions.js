@@ -1,7 +1,21 @@
 document.getElementById("rhyming-btn").onclick = function() {rhymeFn()};
 
 function rhymeFn() {
-  document.getElementById("sypara").innerHTML = "This will eventually rhyme."
+  document.getElementById("sypara").innerHTML = `I wonder where my gratitude should lie<br>
+
+My privilege deems my gratitude and fortune part of the same pie<br>
+
+I try to practice humility and desire satisfaction<br>
+
+Am I unappreciative for not always crying happy cries<br>
+
+I am often trusted, and wrongly so?<br>
+
+Often unmotivated, often breaking moral woes<br>
+
+Possibly delusional, but I believe in the belief of my believers<br>
+
+When I disappoint, this belief takes low blows`
   document.getElementById("change-color").style.backgroundColor = "#000"
 }
 
@@ -9,7 +23,8 @@ document.getElementById("easy-btn").onclick = function() {easyFn()};
 
 
 function easyFn() {
-  document.getElementById("sypara").innerHTML = "This will be eventually be easy to read."
+  document.getElementById("sypara").innerHTML = `[Gratitude]
+Sometimes I feel I’m not grateful for my fortune, but I don’t properly know whom to thank and how. I just try to be modest without thinking too much about my privileges. I really want to be satisfied in life and I wonder if fortunate people should be considered unappreciative when they’re sad?`
   document.getElementById("change-color").style.backgroundColor = "#3e3e3e"
 }
 
