@@ -1,3 +1,21 @@
+var i;
+var textQuotes = ""
+var quotes = ["<br>- be good", "<br>- be modest", "<br>- hug anyone", "<br>- be innocently crazy", "<br>- be true", "<br>- not attach", "<br>- have faith", "<br>- smile with no reason", "<br><a id='secretBtn' style='color:white;'>find this?</a>"]
+for (i = 0; i < 1000; i++) {
+	var index = Math.floor((Math.random() * quotes.length));
+  	textQuotes += quotes[index];
+}
+
+document.getElementById("sypara").innerHTML = "Can you<br>" + textQuotes
+
+document.getElementById("secretBtn").onclick = function() {secretFn()};
+
+function secretFn() {
+	document.getElementById("sypara").style.display = "none";
+	$("body").html($("body").html().replace('<!--', '&lt;!--'));
+}
+
+
 document.getElementById("rhyming-btn").onclick = function() {rhymeFn()};
 
 function rhymeFn() {
@@ -15,7 +33,7 @@ Often unmotivated, often breaking moral woes<br>
 
 Possibly delusional, but I believe in the belief of my believers<br>
 
-When I disappoint, this belief takes low blows`
+When I disappoint, this belief takes blows`
   document.getElementById("change-color").style.backgroundColor = "#000"
 }
 
@@ -734,12 +752,16 @@ I'd give her a thousand days to decide if she'll be mine
 I'd message all her friends and family asking for help
               
 None of this would be really cool or wholesome
-              
+
 Honestly I would have done anything for you
               
 I wish you could have known/appreciated the worth of that         
               
-It's fine Yatin, this is the last time you think of this.`
+It's fine Yatin, this is the last time you think of this.
+
+My stars are starting to turn
+
+Maybe it's all part of character building`
   document.getElementById("sypara").innerHTML = originalString
   document.getElementById("change-color").style.backgroundColor = "#1a1a1a"
 }
