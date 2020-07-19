@@ -1,19 +1,19 @@
-var i;
-var textQuotes = ""
-var quotes = ["<br>- be good", "<br>- be modest", "<br>- hug anyone", "<br>- be innocently crazy", "<br>- be true", "<br>- not attach", "<br>- have faith", "<br>- smile with no reason", "<br><a id='secretBtn' style='color:white;'>find this?</a>"]
-for (i = 0; i < 1000; i++) {
-	var index = Math.floor((Math.random() * quotes.length));
-  	textQuotes += quotes[index];
-}
-
-document.getElementById("sypara").innerHTML = "Can you<br>" + textQuotes
-
-document.getElementById("secretBtn").onclick = function() {secretFn()};
-
-function secretFn() {
-	document.getElementById("sypara").style.display = "none";
-	$("body").html($("body").html().replace('<!--', '&lt;!--'));
-}
+//var i;
+//var textQuotes = ""
+//var quotes = ["<br>- be good", "<br>- be modest", "<br>- hug anyone", "<br>- be innocently crazy", "<br>- be true", "<br>- not attach", "<br>- have faith", "<br>- smile with no reason", "<br><a id='secretBtn' style='color:white;'>find this?</a>"]
+//for (i = 0; i < 1000; i++) {
+//	var index = Math.floor((Math.random() * quotes.length));
+//  	textQuotes += quotes[index];
+//}
+//
+//document.getElementById("sypara").innerHTML = "Can you<br>" + textQuotes
+//
+//document.getElementById("secretBtn").onclick = function() {secretFn()};
+//
+//function secretFn() {
+//	document.getElementById("sypara").style.display = "none";
+//	$("body").html($("body").html().replace('<!--', '&lt;!--'));
+//}
 
 
 document.getElementById("rhyming-btn").onclick = function() {rhymeFn()};
@@ -761,7 +761,55 @@ It's fine Yatin, this is the last time you think of this.
 
 My stars are starting to turn
 
-Maybe it's all part of character building`
+It's probably part of a greater plan to build my character
+
+In the moment it seems hard to put up with anything
+
+Closest friends and family don't seem to care enough
+
+I hardly complain, and nobody listens even the few times I do
+
+My family keeps controlling my decisions
+
+I don't comply out of agreement or fear, but out of respect
+
+Freedom to act the way you want is a privilege I miss
+
+If it wouldn't make my family feel bad
+
+I would book a ticket back to Cal at their dissaproval
+
+Give me a room, a computer, a desk, a chair, sufficient water and food supply and
+
+Either nobody
+
+Or a few good listeners
+
+Or a hundred people to perform in front of
+
+It's really hard to be patient with people that don't genuinely listen back to your responses
+
+This writing is also an embodiment of that
+
+Rather than it getting in the hands of people who'll read my opinions with a fixed mindset
+
+They might tell me this is stupid, question why I would write something this long
+
+Or catch my words and make me justify some of them
+
+I'd rather have nobody read it
+
+I have no general knowledge and I hate debating/arguing
+
+Sometimes I change myself to be more likeable to people that I could benefit from
+
+This has almost always turned out counter-productively
+
+Having the ability to be good and build cool things must come at a cost
+
+Often I feel like ending it all but I know I won't
+
+THE END`
   document.getElementById("sypara").innerHTML = originalString
   document.getElementById("change-color").style.backgroundColor = "#1a1a1a"
 }
