@@ -31,9 +31,13 @@ I am often trusted, and wrongly so?<br>
 
 Often unmotivated, often breaking moral woes<br>
 
-Possibly delusional, but I believe in the belief of my believers<br>
+I can suck, but I should remember the belief of my believers<br>
 
-When I disappoint, this belief takes blows`
+When I disappoint, this belief takes unfortunate blows<br>
+
+In ascending order of self-worth it's 5 years ago, today, and one week ago<br>
+
+`
   document.getElementById("change-color").style.backgroundColor = "#000"
 }
 
@@ -809,7 +813,7 @@ Having the ability to be good and build cool things must come at a cost
 
 Often I feel like ending it all but I know I won't
 
-THE END`
+Unfortunately, I'm pretty alone.`
   document.getElementById("sypara").innerHTML = originalString
   document.getElementById("change-color").style.backgroundColor = "#1a1a1a"
 }
