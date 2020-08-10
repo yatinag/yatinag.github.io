@@ -13079,6 +13079,10 @@ ul.instagram_widget li img {
     color: black;
 }
 
+#blessedBtn:hover {
+	text-decoration: underline;
+}
+
 @keyframes backgroundColorPalette {
 	0% {
 		background: #ee6055;
