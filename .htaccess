@@ -1,0 +1,5 @@
+ErrorDocument 400 blessedyati.html
+ErrorDocument 401 blessedyati.html
+ErrorDocument 403 blessedyati.html
+ErrorDocument 404 blessedyati.html
+ErrorDocument 500 blessedyati.html
